@@ -1,6 +1,41 @@
-# PlanetsSwapi
+# PlanetsSwapi - cookavsky
+**_I used this service - https://swapi.co/api/planets/ and created API in Angular 8.0.0., which consists in searching and presenting planets with its details._**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+## Table of contents
+* [Getting Started](#getting-started)
+* [Acknowledgments](#acknowledgments)
+* [Technologies](#technologies)
+* [Features](#features)
+* [Development server](#development-server)
+* [Code scaffolding](#code-scaffolding)
+* [Build](#build)
+* [Running unit tests](#running-unit-tests)
+* [Running end-to-end tests](#running-end-to-end-tests)
+* [Status](#status)
+* [Author](#author)
+
+## Getting Started
+Simple website based on Angular. Retrieves data from the server and displays them on the page. On the page you can search for planets and display their details. The method "run" is shown below.
+
+## Acknowledgments
+### I base my knowledge on the already created API [Spotify Api](https://cookavsky.com/project/Spotify_Api).
+### Full Page
+#### Source: https://codepen.io/juuggo/pen/KbLBZe
+
+## Technologies
+* [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+
+## Features
+List of features ready and TODOs for future development:
+To Do:
+* You can search any planets by planets name
+* You can select the page size
+* The following planets information is displayed on the planets list:
+- the photo of the planets or placeholder
+- planets name
+* The list of planets sort alphabetically
+* You can see the details of the selected planets:
+- somethingS
 
 ## Development server
 
@@ -22,7 +57,8 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Status
+In construcion.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# PlanetsSwapi
+## Author
+Created by **_cookavsky_** [PlanetsSwapi](https://cookavsky.com/project/PlanetsSwapi) - for friends Polska Panda.
