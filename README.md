@@ -18,9 +18,13 @@
 Simple website based on Angular. Retrieves data from the server and displays them on the page. On the page you can search for planets and display their details. The method "run" is shown below.
 
 ## Acknowledgments
-### I base my knowledge on the already created API [Spotify Api](https://cookavsky.com/project/Spotify_Api).
+### I base my knowledge on the already created API [Spotify Api](https://cookavsky.com/project/Spotify_Api)
 ### Full Page
-#### Source: https://codepen.io/juuggo/pen/KbLBZe
+#### Inspiration and source: https://codepen.io/juuggo/pen/KbLBZe
+### Search Bar
+#### Inspiration and source: https://codepen.io/himalayasingh/pen/dqjLgO
+### Globe
+#### I use globe animation in Portfolio, but source with codepen is not now available
 
 ## Technologies
 * [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.

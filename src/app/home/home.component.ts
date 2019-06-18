@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  constructor(private router: Router) {
+  }
 
-  constructor() { }
+    GoToPage(page:string, input:string) {
+        if(input === null) {
+            this.router.navigate(['/page']);
+        }
+    }
 
   ngOnInit() {
+      //// This code help to refresh Home Page.
+      if( window.localStorage ) {
+        if( !localStorage.getItem('firstLoad') ) {
+            localStorage['firstLoad'] = true;
+            window.location.reload();
+        }
+        else {
+            localStorage.removeItem('firstLoad');
+        }
+    }
 // Implemetion reference: https://juejin.im/post/5aeef41cf265da0ba0630de0
 
     const helper = {
@@ -83,10 +100,10 @@ export class HomeComponent implements OnInit {
             this.pages.style.top = -this.viewHeight * (this.currentPageNumber-1) + 'px';
         }
         textFadeInOut() {
-            const containersDom = document.getElementsByClassName('TextFadeInOut');
-            let textContainers = Array.prototype.slice.call(containersDom);
+            const containersDomA = document.getElementsByClassName('TextFadeInOut');
+            let textContainers = Array.prototype.slice.call(containersDomA);
             textContainers.forEach((e) => {
-                e.classList.remove('In-sight');
+                e.classList.remove('In-Sight');
             });
             let textContainerInSight = textContainers[this.currentPageNumber-1];
             textContainerInSight.classList.add('In-Sight')
@@ -117,11 +134,19 @@ export class HomeComponent implements OnInit {
                 event.preventDefault();
             });
             window.addEventListener('resize', handleResize);
+            document.addEventListener('keydown', (event) => {
+                if (event.keyCode === 38) {
+                    this.scrollUp();
+                } else if (event.keyCode === 40) {
+                    this.scrollDown();
+                }
+            });
         }
     }
     document.addEventListener('DOMContentLoaded', function() {
       let start = new ScrollPages(1,4,document.getElementById('Home'));
-      start.init();
+      start.init()
+      ;
     })
   }
 }

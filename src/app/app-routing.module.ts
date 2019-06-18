@@ -5,7 +5,11 @@ import { SearchComponent } from './search/search.component';
 import { MoreComponent } from './more/more.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+    { path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  { path: 'home', component: HomeComponent },
   { path: 'search', component: SearchComponent },
   { path: 'search/:name', component: MoreComponent }
 ];

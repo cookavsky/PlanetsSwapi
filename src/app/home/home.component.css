@@ -1,112 +1,302 @@
+/*--------------Search--------------*/
+.Search {
+    position: fixed;
+    top: .5em;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    padding: 1em;
+    color: white;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    background-color: rgba(0,0,0,.7);
+    -webkit-box-shadow: 5px 5px 5px 0px #111517, inset 4px 4px 15px 0px #111517, 5px 5px 15px 5px rgba(63,63,63,0);
+    box-shadow: 5px 5px 5px 0px #111517, inset 4px 4px 15px 0px #111517, 5px 5px 15px 5px rgba(63,63,63,0);
+}
+
+.Search-Nav {
+    width: 12em;
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .5em;
+    background-color: #111517;
+    border-radius: 0.25em;
+    box-shadow: 5px 5px 15px #111517, 0 0 0 5px;
+}
+
+.Search-Input {
+    outline: none;
+    width: 60%;
+    height: 100%;
+    color: white;
+    background-color: transparent;
+    border: 0;
+}
+
+.Search-Bar {
+    height: 100%;
+    margin-right: 1em;
+}
+
+.Search-Bar:hover .Circle {
+    width: 2em;
+    height: .5em;
+    border-width: 0;
+    background-color: #fff;
+    border-radius: 1em;
+}
+
+.Search-Bar:hover .Wing {
+    top: 50%;
+    width: 1.25em;
+    height: 1em;
+    margin-top: -0.75em;
+    transform: rotateZ(0);
+}
+
+.Search-Bar:hover .Wing:before {
+    width: 1.5em;
+    bottom: 0.5em;
+    transform: rotateZ(52deg);
+}
+
+.Search-Bar:hover .Wing:after {
+    width: 1.5em;
+    bottom: -0.5em;
+    transform: rotateZ(-52deg);
+}
+
+.Search-Btn
+{
+    cursor: pointer;
+    position: relative;
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+    transform: translateY(-.25em);
+}
+
+.Search-Btn:hover
+{
+    transform: translateY(0);
+}
+
+.Circle
+{
+    position: relative;
+    width: 1.5em;
+    height: 1.5em;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    transition: 0.5s ease all;
+}
+
+.Wing
+{
+    position: absolute;
+    width: 1.25em;
+    height: .25em;
+    transform: rotateZ(52deg);
+    transition: 0.5s ease all;
+}
+
+.Wing:before, .Wing:after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1.25em;
+    height: .5em;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.5s ease all;
+}
+
+.Search-Text {
+    cursor: default;
+    font-size: 1rem;
+    margin-left: 2em;
+}
+/*--------------Page 1--------------*/
 .Home {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
 }
 
 .Home-container {
-  position: relative;
-  top: 0;
-  transition: all 800ms ease;
+    position: relative;
+    top: 0;
+    transition: all 800ms ease;
 }
 
 .Earth {
-  position: absolute;
-  top: 50%;
-  left: 75%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  background: url('../../assets/img/earth-1080_1920.jpg') no-repeat;
-  background-size: cover;
-  transform: translateX(-75%) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    min-width: 100%;
+    min-height: calc(100% - 2em);
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background: url('../../assets/img/earth-1080_1920.jpg') no-repeat;
+    background-size: cover;
+    transform: translateX(-75%) translateY(-50%);
 }
 
 .Page {
-  height: 100%;
-  width: 100%;
-}
-
-.Home-Info, .Home-More, .Home-Details {
-  background-color: black;
+    height: 100%;
+    width: 100%;
 }
 
 .Home-Intro-Header {
-  cursor: default;
-  position: absolute;
-  top: 25%;
-  right: 10%;
-  text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 1rem;
-  color: #FFFFFF;
-  text-shadow: 0 0 2px #fff, -1px -1px 0 hsl(80, 70%, 35%), -2px -2px 1px hsl(80, 70%, 35%), -2px -2px 2px hsl(80, 10%, 15%);
+    cursor: default;
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    text-shadow: 0 0 2px #fff, -1px -1px 0 hsl(80, 70%, 35%), -2px -2px 1px hsl(80, 70%, 35%), -2px -2px 2px hsl(80, 10%, 15%);
 }
 
 .Home-Intro-Header-Earth {
-  font-size: 7rem;
+    font-size: 7rem;
 }
 
 .Home-Intro-Footer {
-  cursor: default;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: .5rem;
-  position: absolute;
-  bottom: 0%;
-  right: 10%;
-  color: #FFFFFF;
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: .5rem;
+    position: absolute;
+    bottom: 0%;
+    right: 10%;
 }
 
 .Arrow-Bottom {
-  fill: #FFFFFF;
-  height: 5em;
-  width: 2em;
-  animation: Arrow-Move 1.5s infinite;
+    fill: #FFFFFF;
+    height: 5em;
+    width: 2em;
+    animation: Arrow-Move 1.5s infinite;
 }
 
 @keyframes Arrow-Move {
-  0% {
-    transform: translateY(-1em);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-1em);
-  }
+    0% {
+        transform: translateY(-1em);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-1em);
+    }
+}
+/*--------------Page 2--------------*/
+.Home-Info {
+    background: url("../../assets/img/Home-Info-1-800_1280.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Home-Info-Text {
+    margin: auto 0 auto 4em;
+    width: 40%;
+}
+
+.Home-Info-Img {
+    margin: auto 4em auto 0;
+    height: 50%;
+    width: 40%;
+}
+
+.globe {
+    height: 25em;
+    width: 25em;
+    box-shadow: inset -20px -10px 200px rgba(0,0,0,1), inset -5px -5px 50px rgba(0,0,0,.75), 0 0 50px rgba(12,111,180,.75);
+    border: solid rgba(10,100,150,.85) 1px;
+    border-radius: 50%;
+    background: url("../../assets/img/Home-Info-2-1080-1920.jpg") repeat-x left top;
+    background-size: cover;
+}
+
+.clouds {
+    height: 25em;
+    width: 25em;
+	position: absolute;
+    border-radius: 50%;
+    background: url("../../assets/img/cloud.png");
+}
+
+.clouds1 {
+    transform: rotate(-2deg);
+}
+
+.clouds2 {
+    box-shadow: inset -90px -10px 100px rgba(0,0,0,.7);
+    transform: rotate(2deg);
+}
+/*--------------Page 3--------------*/
+.Home-More {
+    background-color: #111517;
+    display: flex;
+}
+
+.Home-More-Img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Home-More-Img-1 {
+    height: 100%;
+    width: 60%;
+    transition: all 800ms ease;
+}
+
+.Home-More-Img-1:hover {
+    transition: all 800ms ease;
+    transform: scaleX(1.2);
+}
+
+.Home-More-Text {
+    position: relative;
+    width: 40%;
+    background-color: #111517;
+    margin: auto 5em auto auto;
+    padding: 1.5em;
+}
+/*--------------Page 4--------------*/
+.Home-Details {
+    display: flex;
+    background: url("../../assets/img/Home-Details-1-1280-1920.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Home-Details-Text {
+    margin: auto;
+    text-shadow: 3px 2px 3px rgba(0,0,0);
 }
 
 .TextFadeInOut {
-  opacity: 0;
-  visibility: visible;
-  transition: all 3s ease;
+    opacity: 0;
+    visibility: visible;
+    transition: all 3s ease;
 }
 
 .In-Sight {
     opacity: 1;
     visibility: visible;
-}
-
-.Home-Info-Img {
-  display: flex;
-  flex-direction: column;
-}
-
-.Home-Info-Img-1 {
-  height: 50%;
-  width: 40%;
-}
-
-.Home-Info-Img-2 {
-  height: 50%;
-  width: 40%;
-}
-
-.A {
-  position: relative;
-  color: wheat;
 }
