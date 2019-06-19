@@ -1,1 +1,18 @@
-<p>AAAABBBBCCCC</p>
+<section class="Search">
+    <div class="Search-Nav">
+        <input class="Search-Input" [(ngModel)]="PlanetsSearch" (keyup)="SearchName(PlanetsSearch)" type="text" placeholder="Search">
+    </div>
+    <div class="Search-Menu">
+        <img class="Logo" src="../../assets/img/Logo.svg" alt="Logo">
+        <a routerLink="/home" routerLinkActive="active">
+            <img class="Search-Menu-Icon" src="../../assets/img/home-sign.svg" alt="Home">
+        </a>
+    </div>
+</section>
+
+
+<article class="Score-container">
+<section class="Score">
+        <h2>Planets</h2>
+</section>
+</article>

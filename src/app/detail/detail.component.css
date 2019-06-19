@@ -1,10 +1,16 @@
+body {
+    background-color: #111517;
+}
 /*--------------Search--------------*/
 .Search {
+    position: fixed;
+    top: .5em;
+    z-index: 2;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 30em;
+    width: 25em;
     padding: 1em;
     color: white;
     border-top-right-radius: 2em;
@@ -12,29 +18,6 @@
     background-color: rgba(0,0,0,.7);
     -webkit-box-shadow: 5px 5px 5px 0px #111517, inset 4px 4px 15px 0px #111517, 5px 5px 15px 5px rgba(63,63,63,0);
     box-shadow: 5px 5px 5px 0px #111517, inset 4px 4px 15px 0px #111517, 5px 5px 15px 5px rgba(63,63,63,0);
-}
-
-.Search-Nav {
-    width: 12em;
-    height: 3em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 .5em;
-    margin-right: 1em;
-    background-color: #111517;
-    border-radius: 0.25em;
-    box-shadow: 5px 5px 15px #111517, 0 0 0 5px;
-}
-
-.Search-Input {
-    outline: none;
-    width: 100%;
-    height: 100%;
-    color: white;
-    background-color: transparent;
-    border: 0;
 }
 
 .Search-Menu {

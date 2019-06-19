@@ -1,17 +1,15 @@
 <main class="Home">
     <div id="Home" class="Home-container">
         <section class="Search">
-            <form method="get" action="">
-                <div class="Search-Nav">
-                <input class="Search-Input" type="text" placeholder="Search" required>
-                    <div class="Search-Bar">
-                        <button class="Search-Btn" type="submit" (click)="goToPage('search', input)">
-                            <div class="Circle"></div>
-                            <span class="Wing"></span>
-                        </button>
-                    </div>
+            <div class="Search-Nav">
+                <input class="Search-Input" [(ngModel)]="PlanetsSearch" (keyup)="SearchName()" type="text" placeholder="Search" required>
+                <div class="Search-Bar">
+                    <button class="Search-Btn" type="submit" (click)="GoToPage('/search')" routerLinkActive="active">
+                        <div class="Circle"></div>
+                        <span class="Wing"></span>
+                    </button>
                 </div>
-            </form>
+            </div>
             <h2 class="Search-Text">If you already know everything about our Earth, try to look for another planet!</h2>
         </section>
         <section class="Home-Intro Page">

@@ -25,6 +25,8 @@ Simple website based on Angular. Retrieves data from the server and displays the
 #### Inspiration and source: https://codepen.io/himalayasingh/pen/dqjLgO
 ### Globe
 #### I use globe animation in Portfolio, but source with codepen is not now available
+### Local Storage
+#### http://plnkr.co/edit/eyywQGgWjhC8gS7Wprcw?p=preview
 
 ## Technologies
 * [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
