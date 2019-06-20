@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
     PlanetsSearch = (localStorage.getItem('PlanetsSearch') !== null) ? this.PlanetName : "";
     constructor(private router: Router) {}
 
-    SearchName() {
+    SearchName(string) {
         localStorage.setItem('PlanetsSearch', this.PlanetsSearch);
     }
 
@@ -33,7 +33,6 @@ export class HomeComponent implements OnInit {
                 localStorage.removeItem('firstLoad');
             }
         }
-
         // Implemetion reference: https://juejin.im/post/5aeef41cf265da0ba0630de0
         const helper = {
             getDelta(event) {
@@ -88,16 +87,22 @@ export class HomeComponent implements OnInit {
             }
             scrollDown() {
                 if (this.currentPageNumber !== this.totalPageNumber) {
+                    const containersDomA = document.getElementsByClassName('TextFadeInOut');
                     this.pages.style.top = (-this.viewHeight * this.currentPageNumber) + 'px';
                     this.currentPageNumber++;
-                    this.textFadeInOut();
+                    if (containersDomA.length > 0) {
+                        this.textFadeInOut();
+                    }
                 }
             }
             scrollUp() {
                 if (this.currentPageNumber !== 1) {
+                    const containersDomA = document.getElementsByClassName('TextFadeInOut');
                     this.pages.style.top = (-this.viewHeight * (this.currentPageNumber - 2)) + 'px';
                     this.currentPageNumber--;
-                    this.textFadeInOut();
+                    if (containersDomA.length > 0) {
+                        this.textFadeInOut();
+                    }
                 }
             }
             resize() {

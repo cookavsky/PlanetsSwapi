@@ -10,8 +10,20 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   { path: 'home', component: HomeComponent },
-  { path: 'search', component: SearchComponent },
-  { path: 'search/:name', component: DetailComponent }
+  {
+    path: 'search',
+    component: SearchComponent,
+    children: [
+      {
+        path: '',
+        component: SearchComponent,
+      },
+      {
+        path: ':id',
+        component: DetailComponent,
+      }
+    ]
+  },
 ];
 
 @NgModule({

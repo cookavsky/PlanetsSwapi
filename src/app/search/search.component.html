@@ -4,7 +4,7 @@
     </div>
     <div class="Search-Menu">
         <img class="Logo" src="../../assets/img/Logo.svg" alt="Logo">
-        <a routerLink="/home" routerLinkActive="active">
+        <a (click)="Home('/home')" routerLinkActive="active">
             <img class="Search-Menu-Icon" src="../../assets/img/home-sign.svg" alt="Home">
         </a>
     </div>
@@ -16,3 +16,11 @@
         <h2>Planets</h2>
 </section>
 </article>
+
+    <article class="Score-container" *ngIf="Planets">
+        <section class="Score" *ngFor="let alb of Planets">
+            <div class="Title">
+                <h2>{{alb.name}}</h2>
+            </div>
+        </section>
+        </article>
