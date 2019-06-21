@@ -54,3 +54,23 @@
     height: 3em;
     margin: 0 1em;
 }
+
+.Planets {
+    width: 70%;
+    background-color: #DFDFDF;
+    border-radius: .5em;
+    margin: 5em auto;
+    text-align: center;
+}
+
+.Planet-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(65, 92, 158);
+}
+
+.blue {
+    background-color: rgb(65, 92, 158);
+    border-radius: .5em;
+}

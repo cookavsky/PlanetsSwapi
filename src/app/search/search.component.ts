@@ -26,7 +26,7 @@ export class SearchComponent implements OnInit {
 
   SearchName(string: string) {
     let Planets = [];
-    console.log(string);
+    let id = [];
     this.searchUrl = 'https://swapi.co/api/planets/?search=' + string;
     this._http.get(this.searchUrl)
       .subscribe((str: any) => {
@@ -38,14 +38,26 @@ export class SearchComponent implements OnInit {
             .subscribe((Plat: any) => {
               for (let y = 0; y < Plat.results.length; y++) {
                 Planets.push(Plat.results[y]);
+                this.PlanetsID(Planets, Plat, y);
                 this.Planets = Planets;
                 localStorage.removeItem('PlanetsSearch');
-          }
+              }
         })
       }
-    })
+      })
     if (Planets.length === 0) {
       this.Planets = null;
+    }
+  }
+
+  PlanetsID(Planets, Plat, y) {
+    if (Plat.results[y].url.length === 31) {
+      let id = { id: Plat.results[y].url.substr(29, 1) };
+      console.log(id)
+      Planets.push({ id: Plat.results[y].url.substr(29, 1) });
+    } else if (Plat.results[y].url.length === 32) {
+      let id = { id: Plat.results[y].url.substr(29, 1) }; console.log(id)
+      Planets.push({ id: Plat.results[y].url.substr(29, 2) });
     }
   }
 

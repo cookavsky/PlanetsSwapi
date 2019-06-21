@@ -1,6 +1,6 @@
 <section class="Search">
     <div class="Search-Nav">
-        <input class="Search-Input" [(ngModel)]="PlanetsSearch" (keyup)="SearchName(PlanetsSearch)" type="text" placeholder="Search">
+        <input id="Search-Input" class="Search-Input" [(ngModel)]="PlanetsSearch" (keyup)="SearchName(PlanetsSearch)" type="text" placeholder="Search">
     </div>
     <div class="Search-Menu">
         <img class="Logo" src="../../assets/img/Logo.svg" alt="Logo">
@@ -9,18 +9,29 @@
         </a>
     </div>
 </section>
-
-
-<article class="Score-container">
-<section class="Score">
-        <h2>Planets</h2>
+<section class="Planets">
+    <article class="Planet-container blue">
+        <div class="Planet-ID">
+            <h2>ID</h2>
+        </div>
+        <div class="Planet-Title">
+            <h2>Name</h2>
+        </div>
+        <div class="Planet-Population">
+            <h2>Population</h2>
+        </div>
+    </article>
+    <article class="Planet-container" *ngFor="let Planet of Planets">
+        <a class="Planet-Title" [routerLink]="['/detail', Planet.name]">
+            <h2>{{Planet.name}}</h2>
+        </a>
+        <div class="Planet-Population">
+            <h2>{{Planet.population}}</h2>
+        </div>
+                <div class="Planet-ID">
+                    <h2>{{Planet.id}}</h2>
+                </div>
+    </article>
 </section>
-</article>
 
-    <article class="Score-container" *ngIf="Planets">
-        <section class="Score" *ngFor="let alb of Planets">
-            <div class="Title">
-                <h2>{{alb.name}}</h2>
-            </div>
-        </section>
-        </article>
+
