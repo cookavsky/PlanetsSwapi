@@ -9,29 +9,31 @@
         </a>
     </div>
 </section>
-<section class="Planets">
-    <article class="Planet-container blue">
-        <div class="Planet-ID">
-            <h2>ID</h2>
-        </div>
-        <div class="Planet-Title">
-            <h2>Name</h2>
-        </div>
-        <div class="Planet-Population">
-            <h2>Population</h2>
-        </div>
-    </article>
-    <article class="Planet-container" *ngFor="let Planet of Planets">
-        <a class="Planet-Title" [routerLink]="['/detail', Planet.name]">
-            <h2>{{Planet.name}}</h2>
+<table class="Planets">
+    <thead class="Planet-container blue">
+        <tr class="Planet-ID">
+            <th>ID</th>
+        </tr>
+        <tr class="Planet-Title">
+            <th>Name</th>
+        </tr>
+        <tr class="Planet-Population">
+            <th>Population</th>
+        </tr>
+    </thead>
+    <tbody>
+        <a class="Planet-container" *ngFor="let Planet of Planets" [routerLink]="['/detail', Planet.id]">
+            <tr class="Planet-ID">
+                <th>{{Planet.id}}</th>
+            </tr>
+            <tr class="Planet-Title">
+                <th>{{Planet.name}}</th>
+            </tr>
+            <tr class="Planet-Population">
+                <th>{{Planet.population}}</th>
+            </tr>
         </a>
-        <div class="Planet-Population">
-            <h2>{{Planet.population}}</h2>
-        </div>
-                <div class="Planet-ID">
-                    <h2>{{Planet.id}}</h2>
-                </div>
-    </article>
-</section>
+    </tbody>
+</table>
 
 

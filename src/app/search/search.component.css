@@ -56,21 +56,55 @@
 }
 
 .Planets {
+    cursor: default;
     width: 70%;
-    background-color: #DFDFDF;
-    border-radius: .5em;
-    margin: 5em auto;
+    color: #CACACA;
+    background-color: #111517;
     text-align: center;
+    margin: 5em auto;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
 }
 
 .Planet-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    border-bottom: 1px solid rgb(65, 92, 158);
+    background-color: #312828;
+    color: #CACACA;
+    text-decoration: none;
+    padding: 1em 2em;
 }
 
-.blue {
-    background-color: rgb(65, 92, 158);
-    border-radius: .5em;
+.Planet-container:nth-child(2n){
+  background-color: #191818;
+}
+
+.Planet-container:hover {
+    cursor: pointer;
+    background-color: #504545;
+}
+
+.blue, .blue:hover {
+    cursor: default;
+    background-color: #111517;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.Planet-ID, .Planet-Title, .Planet-Population {
+    display: flex;
+    justify-content: center;
+    margin: 0 0.25em;
+}
+
+.Planet-ID {
+    flex-basis: 20%;
+}
+
+.Planet-Title {
+    flex-basis: 40%;
+}
+
+.Planet-Population {
+    flex-basis: 40%;
 }

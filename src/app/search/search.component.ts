@@ -37,8 +37,9 @@ export class SearchComponent implements OnInit {
           this._http.get(this.searchUrlComplete)
             .subscribe((Plat: any) => {
               for (let y = 0; y < Plat.results.length; y++) {
+                Plat.results[y].id = 0;
+                this.PlanetsID(id, Plat, y);
                 Planets.push(Plat.results[y]);
-                this.PlanetsID(Planets, Plat, y);
                 this.Planets = Planets;
                 localStorage.removeItem('PlanetsSearch');
               }
@@ -50,14 +51,11 @@ export class SearchComponent implements OnInit {
     }
   }
 
-  PlanetsID(Planets, Plat, y) {
+  PlanetsID(id, Plat, y) {
     if (Plat.results[y].url.length === 31) {
-      let id = { id: Plat.results[y].url.substr(29, 1) };
-      console.log(id)
-      Planets.push({ id: Plat.results[y].url.substr(29, 1) });
+      Plat.results[y].id = Plat.results[y].url.substr(29, 1);
     } else if (Plat.results[y].url.length === 32) {
-      let id = { id: Plat.results[y].url.substr(29, 1) }; console.log(id)
-      Planets.push({ id: Plat.results[y].url.substr(29, 2) });
+      Plat.results[y].id = Plat.results[y].url.substr(29, 2);
     }
   }
 
