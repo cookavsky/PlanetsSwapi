@@ -1,13 +1,10 @@
 /*--------------Search--------------*/
 .Search {
-    position: fixed;
-    top: .5em;
-    z-index: 2;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 25em;
+    width: 30em;
     padding: 1em;
     color: white;
     border-top-right-radius: 2em;
@@ -35,15 +32,38 @@
     margin: 0 1em;
 }
 
-.Planets {
+.Planet {
     cursor: default;
     width: 70%;
-    color: #CACACA;
-    background-color: #111517;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin: 5em auto;
-    border-top-right-radius: 1em;
-    border-top-left-radius: 1em;
+    color: #d7d7d7;
+    border-radius: 0.5em;
+    box-shadow: 5px 5px 5px 0px #111517, inset 4px 4px 15px 0px #111517, 5px 5px 15px 5px rgba(63,63,63,0);
+}
+
+.Planet-Detail {
+    flex-basis: 50%;
+    background-color: #312828;
+}
+
+.Planet-container {
+    display: flex;
+    justify-content: center;
+    flex-basis: 50%;
+    align-items: center;
+}
+
+.Planet-container-img {
+    width: 15em;
+}
+/*
+.Planet {
+    cursor: default;
+    display: flex;
+    flex-direction: row;
 }
 
 .Planet-container {
@@ -60,7 +80,6 @@
 }
 
 .Planet-container:hover {
-    cursor: pointer;
     background-color: #504545;
 }
 
@@ -87,4 +106,4 @@
 
 .Planet-Population {
     flex-basis: 40%;
-}
+}*/

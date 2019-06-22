@@ -1,7 +1,7 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit, Injectable, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { Planet } from '../planet';
 import { HttpClient } from '@angular/common/http';
+import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 
 @Injectable({
   providedIn: 'root'
@@ -12,13 +12,18 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  listData: MatTableDataSource<any>;
+  displayedColumns: string[] = ['id', 'name', 'population'];
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+
   private searchUrl: string;
   private searchUrlComplete: string;
   CountPlanets: number;
   AllPage: number;
-  Planets: Planet[];
+
   PlanetName = localStorage.getItem('PlanetsSearch');
-  PlanetsSearch = (localStorage.getItem('PlanetsSearch') !== null) ? this.PlanetName : "";
+  PlanetsSearch: string = (localStorage.getItem('PlanetsSearch') !== null) ? this.PlanetName : "";
 
   constructor(private router: Router, private _http: HttpClient) {
     this.SearchName(this.PlanetsSearch);
@@ -26,7 +31,6 @@ export class SearchComponent implements OnInit {
 
   SearchName(string: string) {
     let Planets = [];
-    let id = [];
     this.searchUrl = 'https://swapi.co/api/planets/?search=' + string;
     this._http.get(this.searchUrl)
       .subscribe((str: any) => {
@@ -38,20 +42,18 @@ export class SearchComponent implements OnInit {
             .subscribe((Plat: any) => {
               for (let y = 0; y < Plat.results.length; y++) {
                 Plat.results[y].id = 0;
-                this.PlanetsID(id, Plat, y);
+                this.PlanetsID(Plat, y);
                 Planets.push(Plat.results[y]);
-                this.Planets = Planets;
+                this.MatSortPagin(Planets);
+                this.applyFilter();
                 localStorage.removeItem('PlanetsSearch');
               }
         })
       }
-      })
-    if (Planets.length === 0) {
-      this.Planets = null;
-    }
+    })
   }
 
-  PlanetsID(id, Plat, y) {
+  PlanetsID(Plat, y) {
     if (Plat.results[y].url.length === 31) {
       Plat.results[y].id = Plat.results[y].url.substr(29, 1);
     } else if (Plat.results[y].url.length === 32) {
@@ -59,8 +61,29 @@ export class SearchComponent implements OnInit {
     }
   }
 
-  Home(parametr: string) {
+  GoToDetail(parametr: string, id: any) {
+    localStorage.setItem('PlanetsSearch', this.PlanetsSearch);
+    localStorage.setItem('PlanetID', id);
+    this.router.navigate([parametr, id]);
+  }
+
+  GoToHome(parametr: string) {
     this.router.navigate([parametr]);
+  }
+
+  MatSortPagin(Planets) {
+    this.listData = new MatTableDataSource(Planets);
+    this.listData.sort = this.sort;
+    this.listData.paginator = this.paginator;
+    this.listData.filterPredicate = (data, filter) => {
+      return this.displayedColumns.some(ele => {
+        return data[ele].toLowerCase().indexOf(filter) != -1;
+      })
+    }
+  }
+
+  applyFilter() {
+    this.listData.filter = this.PlanetsSearch.trim().toLowerCase();
   }
 
   ngOnInit() {

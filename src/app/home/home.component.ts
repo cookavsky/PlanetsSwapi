@@ -9,15 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-    PlanetName = localStorage.getItem('PlanetsSearch');
-    PlanetsSearch = (localStorage.getItem('PlanetsSearch') !== null) ? this.PlanetName : "";
+    LocalPlanetName = localStorage.getItem('PlanetsSearch');
+    PlanetsSearch = (localStorage.getItem('PlanetsSearch') !== null) ? this.LocalPlanetName : "";
     constructor(private router: Router) {}
 
-    SearchName(string) {
+    GoToSearch(parametr: string) {
         localStorage.setItem('PlanetsSearch', this.PlanetsSearch);
-    }
-
-    GoToPage(parametr: string) {
         this.router.navigate([parametr]);
     }
 

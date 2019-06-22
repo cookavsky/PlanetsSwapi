@@ -27,6 +27,8 @@ Simple website based on Angular. Retrieves data from the server and displays the
 #### I use globe animation in Portfolio, but source with codepen is not now available
 ### Local Storage
 #### http://plnkr.co/edit/eyywQGgWjhC8gS7Wprcw?p=preview
+### Material Angular and table with sorting and page size
+#### Inspiration and source: https://github.com/CodAffection/Angular-Material-Data-Table-Paging-Sorting-Filtering
 
 ## Technologies
 * [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
@@ -34,14 +36,28 @@ Simple website based on Angular. Retrieves data from the server and displays the
 ## Features
 List of features ready and TODOs for future development:
 To Do:
-* You can search any planets by planets name
 * You can select the page size
-* The following planets information is displayed on the planets list:
-- the photo of the planets or placeholder
-- planets name
 * The list of planets sort alphabetically
+* Find better way to remove score, when ist 0 search name
+
+Finished:
+* You can search any planets by planets name
+* The following planets information is displayed on the planets list:
+- id
+- name
+- population
 * You can see the details of the selected planets:
-- somethingS
+- climate
+- diameter
+- gravity
+- name
+- orbital_period
+- population
+- rotation_period
+- surface_water
+- terrain
+- img
+- id
 
 ## Development server
 

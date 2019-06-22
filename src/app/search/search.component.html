@@ -4,36 +4,27 @@
     </div>
     <div class="Search-Menu">
         <img class="Logo" src="../../assets/img/Logo.svg" alt="Logo">
-        <a (click)="Home('/home')" routerLinkActive="active">
+        <a (click)="GoToHome('/home')" routerLinkActive="active">
             <img class="Search-Menu-Icon" src="../../assets/img/home-sign.svg" alt="Home">
         </a>
     </div>
 </section>
-<table class="Planets">
-    <thead class="Planet-container blue">
-        <tr class="Planet-ID">
-            <th>ID</th>
-        </tr>
-        <tr class="Planet-Title">
-            <th>Name</th>
-        </tr>
-        <tr class="Planet-Population">
-            <th>Population</th>
-        </tr>
-    </thead>
-    <tbody>
-        <a class="Planet-container" *ngFor="let Planet of Planets" [routerLink]="['/detail', Planet.id]">
-            <tr class="Planet-ID">
-                <th>{{Planet.id}}</th>
-            </tr>
-            <tr class="Planet-Title">
-                <th>{{Planet.name}}</th>
-            </tr>
-            <tr class="Planet-Population">
-                <th>{{Planet.population}}</th>
-            </tr>
-        </a>
-    </tbody>
-</table>
-
-
+<div class="Planets">
+    <mat-table class="Planet-container" [dataSource]="listData" matSort>
+        <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.id}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="population">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Population</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.population}}</mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns sticky: true"></mat-header-row>
+        <mat-row (click)="GoToDetail('/detail', row.id)" class="Planet-score" *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+</div>

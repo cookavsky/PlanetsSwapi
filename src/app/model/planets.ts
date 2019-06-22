@@ -1,4 +1,4 @@
-export class Planet {
+export class Planets {
     climate: string;
     created: Date;
     edited: Date;
@@ -13,5 +13,6 @@ export class Planet {
     surface_water: string;
     terrain: string;
     url: string;
+    img: string;
     id: number;
 }

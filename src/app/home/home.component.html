@@ -2,9 +2,9 @@
     <div id="Home" class="Home-container">
         <section class="Search">
             <div class="Search-Nav">
-                <input class="Search-Input" [(ngModel)]="PlanetsSearch" (keyup)="SearchName()" type="text" placeholder="Search" required>
+                <input class="Search-Input" [(ngModel)]="PlanetsSearch" type="text" placeholder="Search">
                 <div class="Search-Bar">
-                    <button class="Search-Btn" type="submit" (click)="GoToPage('/search')">
+                    <button class="Search-Btn" type="submit" (click)="GoToSearch('/search')">
                         <div class="Circle"></div>
                         <span class="Wing"></span>
                     </button>
