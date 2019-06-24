@@ -11,3 +11,29 @@ body {
     width: 100%;
     background-color: #111517;
 }
+
+@media (max-width: 350px) {
+    body {
+        font-size: 0.5rem;
+    }
+} @media (min-width: 351px) and (max-width: 450px) {
+    body {
+        font-size: 0.6rem;
+    }
+} @media (min-width: 451px) and (max-width: 550px) {
+    body {
+        font-size: 0.7rem;
+    }
+} @media (min-width: 551px) and (max-width: 750px) {
+    body {
+        font-size: 0.75rem;
+    }
+} @media (min-width: 650px) and (max-width: 1000px) and (min-height: 400px) {
+    body {
+        font-size: 0.9rem;
+    }
+} @media (min-width: 751px) and (max-width: 850px) {
+    body {
+        font-size: 0.8rem;
+    }
+}

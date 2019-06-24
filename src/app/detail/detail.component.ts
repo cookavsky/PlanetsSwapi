@@ -13,7 +13,6 @@ export class DetailComponent implements OnInit {
   private PlanetUrl: string;
   Planet: Planets[];
   PlanetID = localStorage.getItem('PlanetID');
-  imgSrc: Observable<string>;
 
   constructor(private router: Router, private _http: HttpClient) { }
 

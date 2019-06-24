@@ -68,11 +68,18 @@
     background-color: #312828;
 }
 
-.Planet-score:nth-child(2n){
+.Planet-score:nth-child(2n) {
   background-color: #191818;
 }
 
 .Planet-score:hover {
     cursor: pointer;
     background-color: #504545;
+}
+
+@media (max-width: 650px) {
+    .Planets {
+        width: 100%;
+        margin: auto;
+    }
 }

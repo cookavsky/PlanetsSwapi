@@ -3,6 +3,7 @@
 
 ## Table of contents
 * [Getting Started](#getting-started)
+* [Screenshots](#screenshots)
 * [Acknowledgments](#acknowledgments)
 * [Technologies](#technologies)
 * [Features](#features)
@@ -17,6 +18,11 @@
 ## Getting Started
 Simple website based on Angular. Retrieves data from the server and displays them on the page. On the page you can search for planets and display their details. The method "run" is shown below.
 
+## Screenshots
+![Example screenshot](./src/assets/img/screencapture1.jpg)
+![Example screenshot](./src/assets/img/screencapture2.jpg)
+![Example screenshot](./src/assets/img/screencapture3.jpg)
+
 ## Acknowledgments
 ### I base my knowledge on the already created API [Spotify Api](https://cookavsky.com/project/Spotify_Api)
 ### Full Page
@@ -28,17 +34,20 @@ Simple website based on Angular. Retrieves data from the server and displays the
 ### Local Storage
 #### http://plnkr.co/edit/eyywQGgWjhC8gS7Wprcw?p=preview
 ### Material Angular and table with sorting and page size
-#### Inspiration and source: https://github.com/CodAffection/Angular-Material-Data-Table-Paging-Sorting-Filtering
+#### Inspiration and source: https://material.angular.io + https://github.com/CodAffection/Angular-Material-Data-Table-Paging-Sorting-Filtering
+### Loading Data
+#### Inspiration and source: https://www.youtube.com/watch?v=cj42D7waOoU
 
 ## Technologies
 * [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+* [Material Angular](https://material.angular.io/) Devkit 6+.
 
 ## Features
 List of features ready and TODOs for future development:
 To Do:
-* You can select the page size
-* The list of planets sort alphabetically
-* Find better way to remove score, when ist 0 search name
+* Find better way to remove score, when is 0 search name
+* Loading Data
+* Mocking Offline Data
 
 Finished:
 * You can search any planets by planets name
@@ -46,6 +55,8 @@ Finished:
 - id
 - name
 - population
+* You can select the page size
+* The list of planets sort alphabetically
 * You can see the details of the selected planets:
 - climate
 - diameter
@@ -80,7 +91,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Status
-In construcion.
+Finished.
 
 ## Author
 Created by **_cookavsky_** [PlanetsSwapi](https://cookavsky.com/project/PlanetsSwapi) - for friends Polska Panda.

@@ -300,3 +300,215 @@
     opacity: 1;
     visibility: visible;
 }
+
+@media (max-width: 350px) {
+    .Search {
+        min-width: 25em;
+    } .Search-Input {
+        font-size: 0.5rem;
+    } .Search-Text {
+        font-size: 0.5rem;
+    } .Home-Intro-Header-Earth {
+        font-size: 4rem;
+    } .Home-Intro-Footer {
+        font-size: 0.25rem;
+    } .Search-Bar:hover .Circle {
+        width: 1em;
+        height: .15em;
+    } .Search-Bar:hover .Wing {
+        width: 0.5em;
+        height: 1em;
+        margin-top: -0.925em;
+    } .Search-Bar:hover .Wing:before {
+        width: 0.5em;
+        bottom: 0.25em;
+    } .Search-Bar:hover .Wing:after {
+        width: 0.5em;
+        bottom: -0.25em;
+    } .Circle {
+        width: 0.5em;
+        height: 0.5em;
+        border: 2px solid #fff;
+    } .Wing {
+        width: 0.63em;
+        height: 0.13em;
+    } .Wing:before, .Wing:after {
+        width: 0.5em;
+        height: 0.15em;
+    } .globe {
+        background: url("../../assets/img/Home-Info-2-1080-1920.jpg") repeat-x right bottom;
+        background-size: cover;
+    } .Home-More-Text {
+        font-size: 0.45rem;
+        margin: auto 1em 0 auto;
+    }
+} @media (max-width: 350px) and (min-height: 350px) {
+    .Home-More-Text {
+        margin: auto 1em auto auto;
+    }
+} @media (min-width: 351px) and (max-width: 450px) {
+    .Search {
+        min-width: 25em;
+    } .Search-Input {
+        font-size: 0.5rem;
+    } .Search-Text {
+        font-size: 0.5rem;
+    } .Home-Intro-Header-Earth {
+        font-size: 4rem;
+    } .Home-Intro-Footer {
+        font-size: 0.25rem;
+    } .Search-Bar:hover .Circle {
+        width: 1em;
+        height: .15em;
+    } .Search-Bar:hover .Wing {
+        width: 0.5em;
+        height: 1em;
+        margin-top: -0.925em;
+    } .Search-Bar:hover .Wing:before {
+        width: 0.5em;
+        bottom: 0.25em;
+    } .Search-Bar:hover .Wing:after {
+        width: 0.5em;
+        bottom: -0.25em;
+    } .Circle {
+        width: 0.5em;
+        height: 0.5em;
+        border: 2px solid #fff;
+    } .Wing {
+        width: 0.63em;
+        height: 0.13em;
+    } .Wing:before, .Wing:after {
+        width: 0.5em;
+        height: 0.15em;
+    } .globe {
+        height: 20em;
+        width: 20em;
+        background: url("../../assets/img/Home-Info-2-1080-1920.jpg") repeat-x right bottom;
+        background-size: cover;
+    } .clouds {
+        height: 20em;
+        width: 20em;
+    } .Home-More-Text {
+        font-size: 0.45rem;
+        margin: auto 1em auto auto;
+    }
+} @media (min-width: 451px) and (max-width: 550px) {
+    .Search {
+        min-width: 25em;
+    } .Search-Nav {
+        width: 8em;
+    } .Search-Input {
+        font-size: 0.7rem;
+    } .Search-Text {
+        font-size: 0.5rem;
+    } .Home-Intro-Header-Earth {
+        font-size: 4.5rem;
+    } .Home-Intro-Footer {
+        font-size: 0.3rem;
+    } .Search-Bar:hover .Circle {
+        width: 1em;
+        height: .15em;
+    } .Search-Bar:hover .Wing {
+        width: 0.5em;
+        height: 1em;
+        margin-top: -0.925em;
+    } .Search-Bar:hover .Wing:before {
+        width: 0.5em;
+        bottom: 0.25em;
+    } .Search-Bar:hover .Wing:after {
+        width: 0.5em;
+        bottom: -0.25em;
+    } .Circle {
+        width: 0.5em;
+        height: 0.5em;
+        border: 2px solid #fff;
+    } .Wing {
+        width: 0.63em;
+        height: 0.13em;
+    } .Wing:before, .Wing:after {
+        width: 0.5em;
+        height: 0.15em;
+    } .globe {
+        height: 20em;
+        width: 20em;
+        background: url("../../assets/img/Home-Info-2-1080-1920.jpg") repeat-x right bottom;
+        background-size: cover;
+    } .clouds {
+        height: 20em;
+        width: 20em;
+    } .Home-More-Text {
+        font-size: 0.5rem;
+        margin: auto 1em auto auto;
+    }
+} @media (min-width: 551px) and (max-width: 650px) {
+    .Search {
+        min-width: 25em;
+    } .Search-Nav {
+        width: 8em;
+    } .Search-Input {
+        font-size: 0.7rem;
+    } .Search-Text {
+        font-size: 0.65rem;
+    } .Home-Intro-Header-Earth {
+        font-size: 4.5rem;
+    } .Home-Intro-Footer {
+        font-size: 0.35rem;
+    } .Search-Bar:hover .Circle {
+        width: 1em;
+        height: .15em;
+    } .Search-Bar:hover .Wing {
+        width: 0.5em;
+        height: 1em;
+        margin-top: -0.925em;
+    } .Search-Bar:hover .Wing:before {
+        width: 0.5em;
+        bottom: 0.25em;
+    } .Search-Bar:hover .Wing:after {
+        width: 0.5em;
+        bottom: -0.25em;
+    } .Circle {
+        width: 0.5em;
+        height: 0.5em;
+        border: 2px solid #fff;
+    } .Wing {
+        width: 0.63em;
+        height: 0.13em;
+    } .Wing:before, .Wing:after {
+        width: 0.5em;
+        height: 0.15em;
+    } .globe {
+        height: 20em;
+        width: 20em;
+        background: url("../../assets/img/Home-Info-2-1080-1920.jpg") repeat-x right bottom;
+        background-size: cover;
+    } .clouds {
+        height: 20em;
+        width: 20em;
+    } .Home-More-Text {
+        font-size: 0.65rem;
+        margin: auto 1em auto auto;
+    }
+} @media (min-width: 651px) and (max-width: 850px) {
+    .Search {
+        min-width: 30em;
+    } .Search-Nav {
+        width: 10em;
+    } .Search-Text {
+        font-size: 0.65rem;
+    } .Home-Intro-Header-Earth {
+        font-size: 5rem;
+    } .Home-Intro-Footer {
+        font-size: 0.35rem;
+    } .globe {
+        height: 15em;
+        width: 15em;
+        background: url("../../assets/img/Home-Info-2-1080-1920.jpg") repeat-x right bottom;
+        background-size: cover;
+    } .clouds {
+        height: 15em;
+        width: 15em;
+    } .Home-More-Text {
+        font-size: 0.65rem;
+        margin: auto 1em auto auto;
+    }
+}

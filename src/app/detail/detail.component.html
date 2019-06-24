@@ -10,151 +10,51 @@
   </div>
 </section>
 <section class="Planet">
-  <article class="Planet-Detail">
-    <section>
-      <tr class="Planet-ID">
-        <th>ID</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Name</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Rotation period</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Orbital_period</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Diameter</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Climate</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Gravity</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Terrain</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Surface water</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Population</th>
-      </tr>
-    </section>
-    <section>
-      <tr class="Planet-ID">
-        <th>{{PlanetID}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.name}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.rotation_period}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.orbital_period}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.diameter}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.climate}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.gravity}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.terrain}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.surface_water}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.population}}</th>
-      </tr>
-    </section>
-  </article>
-  <article class="Planet-container">
+  <section class="Planet-Detail">
+    <div class="Planet-Title">
+      <h3>ID</h3>
+      <p>{{PlanetID}}</p>
+    </div>
+    <div class="Planet-Title">
+      <h3>Name</h3>
+      <p>{{Planet?.name}}</p>
+    </div>
+    <div class="Planet-Title">
+      <h3>Rotation period</h3>
+      <p>{{Planet?.rotation_period}}</p>
+    </div>
+    <div class="Planet-Title">
+      <h3>Orbital_period</h3>
+      <p>{{Planet?.orbital_period}}</p>
+    </div>
+  </section>
+  <section class="Planet-container">
     <img class="Planet-container-img" src="{{Planet?.img}}" alt="{{ Planet?.name }}">
-  </article>
+  </section>
+  <section class="Planet-Detail">
+    <div class="Planet-Title">
+      <h3>Diameter</h3>
+      <p>{{Planet?.diameter}}</p>
+    </div>
+    <div class="Planet-Title">
+      <h3>Climate</h3>
+      <p>{{Planet?.climate}}</p>
+    </div>
+    <div class="Planet-Title">
+      <h3>Gravity</h3>
+      <p>{{Planet?.gravity}}</p>
+    </div>
+    <div class="Planet-Title">
+      <h3>Terrain</h3>
+      <p>{{Planet?.terrain}}</p>
+    </div>
+    <div class="Planet-Title">
+      <h3>Surface water</h3>
+      <p>{{Planet?.surface_water}}</p>
+    </div>
+    <div class="Planet-Title">
+      <h3>Population</h3>
+      <p>{{Planet?.population}}</p>
+    </div>
+  </section>
 </section>
-
-
-
-
-
-
-
-
-
-<!---
-<table class="Planets">
-  <thead class="Planet-container blue">
-    <tr class="Planet-ID">
-      <th>ID</th>
-    </tr>
-    <tr class="Planet-Title">
-      <th>Name</th>
-    </tr>
-      <tr class="Planet-Title">
-        <th>Rotation period</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Orbital_period</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Diameter</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Climate</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Gravity</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Terrain</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Surface water</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>Population</th>
-      </tr>
-  </thead>
-  <tbody>
-    <a class="Planet-container">
-      <tr class="Planet-ID">
-        <th>{{PlanetID}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.name}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.rotation_period}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.orbital_period}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.diameter}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.climate}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.gravity}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.terrain}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.surface_water}}</th>
-      </tr>
-      <tr class="Planet-Title">
-        <th>{{Planet?.population}}</th>
-      </tr>
-    </a>
-  </tbody>
-</table>-->

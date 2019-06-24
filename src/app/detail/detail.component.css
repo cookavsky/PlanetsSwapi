@@ -34,76 +34,48 @@
 
 .Planet {
     cursor: default;
-    width: 70%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 70%;
     margin: 5em auto;
-    color: #d7d7d7;
+    padding: 5em;
+    color: #CACACA;
+    background-color: #312828;
     border-radius: 0.5em;
-    box-shadow: 5px 5px 5px 0px #111517, inset 4px 4px 15px 0px #111517, 5px 5px 15px 5px rgba(63,63,63,0);
+    border: 1px solid #504545;
+    -webkit-box-shadow: 5px 5px 5px 0px #050607, inset 4px 4px 15px 0px #111517, 5px 5px 15px 5px rgba(63,63,63,0);
+    box-shadow: 5px 5px 5px 0px #050607, inset 4px 4px 15px 0px #111517, 5px 5px 15px 5px rgba(63,63,63,0);
 }
 
 .Planet-Detail {
-    flex-basis: 50%;
-    background-color: #312828;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 25%;
+}
+
+.Planet-Title {
+    margin: 0.5em 0;
 }
 
 .Planet-container {
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-basis: 50%;
-    align-items: center;
 }
 
 .Planet-container-img {
     width: 15em;
-}
-/*
-.Planet {
-    cursor: default;
-    display: flex;
-    flex-direction: row;
+    height: 15em;
 }
 
-.Planet-container {
-    display: flex;
-    flex-direction: row;
-    background-color: #312828;
-    color: #CACACA;
-    text-decoration: none;
-    padding: 1em 2em;
+@media (max-width: 750px) {
+    .Search {
+        width: 25em;
+    } .Planet {
+        width: 95%;
+        padding: 0.5em;
+    }
 }
-
-.Planet-container:nth-child(2n){
-  background-color: #191818;
-}
-
-.Planet-container:hover {
-    background-color: #504545;
-}
-
-.blue, .blue:hover {
-    cursor: default;
-    background-color: #111517;
-    border-top-right-radius: 1em;
-    border-top-left-radius: 1em;
-}
-
-.Planet-ID, .Planet-Title, .Planet-Population {
-    display: flex;
-    justify-content: center;
-    margin: 0 0.25em;
-}
-
-.Planet-ID {
-    flex-basis: 20%;
-}
-
-.Planet-Title {
-    flex-basis: 40%;
-}
-
-.Planet-Population {
-    flex-basis: 40%;
-}*/
