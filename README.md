@@ -48,6 +48,7 @@ To Do:
 * Find better way to remove score, when is 0 search name
 * Loading Data
 * Mocking Offline Data
+* Animation Table
 
 Finished:
 * You can search any planets by planets name
@@ -73,6 +74,19 @@ Finished:
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+To run in website in htaccess add:
+
+`<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# If an existing asset or directory is requested go to it as it is
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+RewriteCond %{HTTPS} off
+RewriteRule (.*) http://%{HTTP_HOST}/project/PlanetsSwapi/index.html
+</IfModule>`
 
 ## Code scaffolding
 

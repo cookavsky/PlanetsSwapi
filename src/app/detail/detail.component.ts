@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { Planets } from '../model/planets';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-detail',
@@ -11,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class DetailComponent implements OnInit {
   private PlanetUrl: string;
-  Planet: Planets[];
+  Planet: any;
   PlanetID = localStorage.getItem('PlanetID');
 
   constructor(private router: Router, private _http: HttpClient) { }
@@ -23,7 +21,7 @@ export class DetailComponent implements OnInit {
 
   ngOnInit() {
     this.PlanetUrl = 'https://swapi.co/api/planets/' + this.PlanetID;
-    this._http.get(this.PlanetUrl)
+    return this._http.get(this.PlanetUrl)
       .subscribe((Data: any) => {
         this.PlanetsImg(Data);
         this.Planet = Data;

@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
                 let inDebounce;
                 return function () {
                     clearTimeout(method.inDebounce);
-                    inDebounce = setTimeout(() => {
+                    inDebounce = setTimeout(function() {
                         method.apply(context, arguments);
                     }, delay);
                 }
